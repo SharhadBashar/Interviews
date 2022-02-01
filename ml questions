@@ -4,6 +4,10 @@ convolutional layer vs fully connected layer
   any advantages of that
 rain question
 
+F-measure
+Recall
+Precision
+Accuracy
 
 
 def lowerCost(stations:List[int]):
