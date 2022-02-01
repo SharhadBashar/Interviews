@@ -9,6 +9,7 @@ Recall
 Precision
 Accuracy
 
+https://datascience.stackexchange.com/questions/107719/difference-between-the-different-measurement-metric
 
 def lowerCost(stations:List[int]):
   '''
