@@ -1,0 +1,255 @@
+Given an array of positive integers a, your task is to calculate how many of its elements have an even number of digits.
+
+
+
+
+Task 2 of 4
+0:54:32
+Codewriting
+
+The city's underground subway stations are split into zones A, B, and C, due to differences in pricing, as shown below:
+
+Underground zones
+
+There are 3 types of tickets, sorted by their price in ascending order:
+
+AB for travel in and between zones A and B only;
+BC for travel in and between zones B and C only;
+ABC for travel in and between any zones - A and B and C.
+You are given 3 arrays of strings stationsA, stationsB, and stationsC, which contain the names of stations in that particular zone. You are also given 2 strings origin and destination, which contain names of the starting and ending station for a trip. Your task is to return a string with the name of the cheapest ticket that will allow you to get from the origin station to destination station. If the origin station or the destination station doesn't exist in any of the zones, return an empty string.
+
+Note: You can assume that a direct route always exists. E.g., if you need to go from zone A to zone B, you shouldn't go via zone C.
+
+Example
+
+For stationsA = ["Green Park", "Holborn"], stationsB = ["Mile End", "Bow Road"], stationsC = ["Forest Hill", "Balham"], origin = "Forest Hill", and destination = "Green Park", the output should be solution(stationsA, stationsB, stationsC, origin, destination) = "ABC".
+
+Explanation: "Forest Hill" is to zone C and "Green Park" is in zone A, so only the ABC ticket would allow you to travel between them.
+
+For stationsA = ["Green Park", "Holborn"], stationsB = ["Mile End", "Bow Road"], stationsC = ["Forest Hill", "Balham"], origin = "Holborn", and destination = "Green Park", the output should be solution(stationsA, stationsB, stationsC, origin, destination) = "AB".
+
+Explanation: Both "Holborn" and "Green Park" are in zone A, so you can potentially use either the "AB" or the "ABC" ticket. Given that the "AB" ticket is cheaper, the answer is "AB".
+
+For stationsA = ["Green Park"], stationsB = ["Mile End"], stationsC = ["Forest Hill"], origin = "Holborn", and destination = "Forest Hill", the output should be solution(stationsA, stationsB, stationsC, origin, destination) = "".
+
+Explanation: "Holborn" is not present in any of the zones, so the answer is "".
+
+Input/Output
+
+[execution time limit] 4 seconds (py3)
+
+[input] array.string stationsA
+
+An array of strings containing names of subway stations.
+
+Guaranteed constraints:
+1 ≤ stationsA.length ≤ 1000,
+1 ≤ stationsA[i].length ≤ 50.
+
+[input] array.string stationsB
+
+An array of strings containing names of subway stations.
+
+Guaranteed constraints:
+1 ≤ stationsB.length ≤ 1000,
+1 ≤ stationsB[i].length ≤ 50.
+
+[input] array.string stationsC
+
+An array of strings containing names of subway stations.
+
+Guaranteed constraints:
+1 ≤ stationsC.length ≤ 1000,
+1 ≤ stationsC[i].length ≤ 50.
+
+[input] string origin
+
+A non-empty string which contains the name of the origin subway station.
+
+Guaranteed constraints:
+1 ≤ origin.length ≤ 50.
+
+[input] string destination
+
+A non-empty string which contains the name of the destination subway station.
+
+Guaranteed constraints:
+1 ≤ destination.length ≤ 50.
+
+[output] string
+
+Return the name of the cheapest ticket which allows you to travel between the origin station the destination station, either: "AB", "BC" or "ABC". If either the origin or the destination station doesn't exist in any of the zones, return and empty string "".
+
+[Python 3] Syntax Tips
+
+# Prints help message to the console
+
+
+
+
+
+
+
+
+Task 3 of 4
+0:52:48
+Codewriting
+
+You are given a matrix of characters representing a board. Each cell of the matrix contains one of three characters:
+
+'.', which means that the cell is empty;
+'*', which means that the cell contains an obstacle;
+'#', which means that the cell contains a box.
+You decide to do the following operations:
+
+Firstly, you push the boxes to the right as far as possible, so each box moves right until it hits an obstacle, another box, or the right edge of the board.
+Then, you push the boxes down as far as possible, so each box moves down until it hits an obstacle, another box, or the bottom of the board.
+Given board, a matrix representation of the board, your task is to return the state of the board after the push and fall operations.
+
+Example
+
+For
+
+board = [['.', '#', '.', '.', '.'],
+         ['.', '.', '.', '.', '.'],
+         ['#', '.', '#', '#', '.'],
+         ['#', '.', '.', '.', '#']]
+the output should be
+
+solution(board) = [['.', '.', '.', '.', '.'],
+                   ['.', '.', '.', '.', '#'],
+                   ['.', '.', '.', '#', '#'],
+                   ['.', '.', '#', '#', '#']]
+Expand to see the example video.
+
+For
+
+board = [['.', '.', '*', '#', '.'],
+         ['#', '#', '.', '*', '.'],
+         ['.', '.', '.', '.', '*'],
+         ['.', '.', '*', '.', '#'],
+         ['#', '.', '#', '.', '*'],
+         ['.', '.', '.', '.', '.']]
+the output should be
+
+solution(board) = [['.', '.', '*', '.', '.'],
+                   ['.', '.', '.', '*', '#'],
+                   ['.', '.', '#', '.', '*'],
+                   ['.', '.', '*', '.', '#'],
+                   ['.', '.', '.', '.', '*'],
+                   ['.', '#', '#', '#', '.']]
+Expand to see the example video.
+
+Input/Output
+
+[execution time limit] 4 seconds (py3)
+
+[input] array.array.char board
+
+A matrix representing a board. The matrix consists only of characters '.', '*', and '#'.
+
+Guaranteed constraints:
+3 ≤ board.length ≤ 100,
+3 ≤ board[i].length ≤ 100.
+
+[output] array.array.char
+
+Return the state of the board after the operations of pushing the boxes to the right, then down.
+
+[Python 3] Syntax Tips
+
+# Prints help message to the console
+# Returns a string
+def helloWorld(name):
+    print("This prints to the console when you Run Tests")
+    return "Hello, " + name
+
+123
+def solution(board):
+
+
+TESTS
+CUSTOM TESTS
+MORE
+0/300
+return
+
+
+
+
+
+
+
+
+
+
+
+
+Task 4 of 4
+0:51:56
+Codewriting
+
+Given an infinite number line, you would like to build few blocks and obstacles on it. Specifically, you have to implement code which supports two types of operations:
+
+[1, x] - builds an obstacle at coordinate x along the number line. It is guaranteed that coordinate x does not contain any obstacles when the operation is performed.
+[2, x, size] - checks whether it's possible to build a block occupying coordinates between x, x + 1, ..., x + size - 1 along the number line. Returns 1 if it is possible, i.e. there are no obstacles at the occupied coordinates, and return 0 otherwise. Please note that this operation does not actually build the block, it only checks whether a block can be built.
+Given an array of operations containing both types of operations above, your task is to return a binary string representing the outputs for all [2, x, size] operations.
+
+Example
+
+For
+
+operations = [[1, 2],
+              [1, 5],
+              [2, 3, 2],
+              [2, 3, 3],
+              [2, 1, 1],
+              [2, 1, 2]]
+the output should be solution(operations) = "1010".
+
+Explanation:
+
+Let's consider all operations:
+
+[1, 2] - builds an obstacle at coordinate 2.
+[1, 5] - builds an obstacle at coordinate 5.
+[2, 3, 2] - checks and returns "1" as it is possible to build a block occupying coordinates 3 and 4.
+[2, 3, 3] - checks and returns "0" as it is not possible to build a block occupying coordinates 3, 4, and 5, because there is an obstacle at coordinate 5.
+[2, 1, 1] - checks and returns "1" as it is possible to build a block occupying coordinate 1.
+[2, 1, 2] - checks and returns "0" as it is not possible to build a block occupying coordinates 1 and 2 because there is an obstacle at coordinate 2.
+So the output is "1010".
+
+Expand to see the example video.
+
+Input/Output
+
+[execution time limit] 4 seconds (py3)
+
+[input] array.array.integer operations
+
+An array of integer arrays representing one of the two types of operations described above. All coordinates within operations are within the following interval [-109, 109]. The size from the second type of operations are positive integers which would not exceed 109.
+
+Guaranteed constraints:
+1 ≤ operations.length ≤ 105.
+
+[output] string
+
+A binary string representing the outputs for all [2, x, size] operations.
+
+[Python 3] Syntax Tips
+
+# Prints help message to the console
+# Returns a string
+def helloWorld(name):
+    print("This prints to the console when you Run Tests")
+    return "Hello, " + name
+
+123
+def solution(operations):
+
+
+TESTS
+CUSTOM TESTS
+MORE
+0/300
+return
